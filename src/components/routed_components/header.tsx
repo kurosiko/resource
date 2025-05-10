@@ -1,10 +1,27 @@
 import { component$ } from "@builder.io/qwik";
+import { useLocation } from "@builder.io/qwik-city";
 
 export const Header = component$(()=>{
     const messages = [
         "5 Day(s) left Doujin & Smartphone Game Super Sale Up to 90% OFF!",
         "Test2",
         "Test3"
+    ]
+    const loc = useLocation();
+    const href_list:{title:string,href:string}[] = [
+        {
+            title:"Home",
+            href:"/",
+        },
+        {
+            title:"Test",
+            href:"/test",
+        },
+        {
+            title:"Images",
+            href:"/images",
+
+        }
     ]
     return (
     <header>
@@ -36,15 +53,20 @@ export const Header = component$(()=>{
                 <div>About</div>
             </div>
         </div>
-        <div>
-            <ul
-                class="flex flex-row *:flex-auto text-center content-center justify-center p-5 divide-x divide-gray-500">
-                <li><a href="https://x.com/kurosiko">Twitter</a></li>
-                <li><a href="https://github.com/kurosiko">GitHub</a></li>
-                <li><a href="https://kurosiko.com">Webpage</a></li>
-            </ul>
+        <div class="flex flex-row *:flex-auto text-center *:content-center *:justify-center divide-x divide-gray-500 h-15 px-5">
+            {href_list.map((item) => {
+                const topLevelPath = loc.url.pathname.match(/^\/([^/]+)/)?.[1] || "";
+                return (
+                    <a 
+                        href={item.href}
+                        key={item.title}
+                        class={topLevelPath === item.href.replace("/", "") ? "bg-pink-500 text-white rounded-t-md font-bold" : ""}
+                    >
+                        {item.title}
+                    </a>
+                );
+            })}
         </div>
-
     </header>
     )
 })

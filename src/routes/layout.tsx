@@ -18,25 +18,25 @@ export default component$(() => {
     <>
       <Header/>
       <div class="p-5">
-      <div class="flex">
-            <div class="w-50">
-                <LongAgo/>
-                <div class="*:flex *:flex-auto *:text-center *:content-center *:justify-center *:flex-col border border-gray-500/50 *:p-3 *:gap-5 my-5">
-                    <label class="bg-gray-500 text-white font-semibold">Search Products</label>
-                    <ul>
-                        <li>Free</li>
-                        <li>Discount</li>
-                        <li>Limited</li>
-                        <li>New</li>
-                    </ul>
-                    <label class="bg-gray-500/30 font-semibold">Products Format</label>
-                    <ul>
-                        <li>Face</li>
-                        <li>Ahoge</li>
-                    </ul>
-                </div>
+        <div class="flex">
+          <div class="w-50 min-w-50">
+            <LongAgo/>
+            <div class="*:flex *:flex-auto *:text-center *:content-center *:justify-center *:flex-col border border-gray-500/50 *:p-3 *:gap-5 my-5">
+              <label class="bg-gray-500 text-white font-semibold">Search Products</label>
+              <ul>
+                <li>Free</li>
+                  <li>Discount</li>
+                  <li>Limited</li>
+                  <li>New</li>
+                </ul>
+                <label class="bg-gray-500/30 font-semibold">Products Format</label>
+                <ul>
+                  <li>Face</li>
+                  <li>Ahoge</li>
+                </ul>
             </div>
-            <Slot/>
+          </div>
+          <Slot/>
         </div>  
       </div>
     </>
