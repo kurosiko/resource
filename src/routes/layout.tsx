@@ -1,7 +1,7 @@
 import { component$, Slot } from "@builder.io/qwik";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import { Header } from "~/components/routed_components/header";
-
+import LongAgo from "/static/images/long_ago.png?jsx"
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
   // https://qwik.dev/docs/caching/
@@ -18,9 +18,9 @@ export default component$(() => {
     <>
       <Header/>
       <div class="p-5">
-      <div class="flex gap-5">
+      <div class="flex">
             <div class="w-50">
-                <img src="/static/images/long_ago.png"/>
+                <LongAgo/>
                 <div class="*:flex *:flex-auto *:text-center *:content-center *:justify-center *:flex-col border border-gray-500/50 *:p-3 *:gap-5 my-5">
                     <label class="bg-gray-500 text-white font-semibold">Search Products</label>
                     <ul>
