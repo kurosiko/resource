@@ -26,9 +26,11 @@ export default component$(()=>{
     const videoSignal = useImage();
     return (
         <div>
+            <h1 class="text-2xl">AD</h1>
             <Ad/>
-            <img src="https://media1.tenor.com/m/Q65Z2bfeRbMAAAAC/testing-simpsons.gif" alt="test"/>
+            <h1 class="text-2xl">Joke</h1>
             <p>{jokeSingnal.value.joke}</p>
+            <h1 class="text-2xl">API</h1>
             {videoSignal.value.map((item) => (
                 <div key={item.src}>
                     <p>{item.title}</p>

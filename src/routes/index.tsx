@@ -1,12 +1,11 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { Ad } from "~/components/routed_components/ad/ad";
 
 export default component$(() => {
   return (
       <main>
-        <div>
-          Ad
-        </div>
+        <Ad/>
         <div>
           Ranking
         </div>

@@ -1,9 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
-
 export const Header = component$(()=>{
     const messages = [
-        "5 Day(s) left Doujin & Smartphone Game Super Sale Up to 90% OFF!",
+        "5 Day left",
         "Test2",
         "Test3"
     ]
@@ -35,7 +34,7 @@ export const Header = component$(()=>{
             </ul>
         </div>
         <div class="flex *:flex-auto px-20 h-20 content-center justify-center">
-            <h1>Resource Logo</h1>
+            <img src="/static/svg/cloud_48dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg"/>
             <div class="flex *:flex-auto p-3 m-2 border rounded-md divide-gray-500 divide-x divide-solid">
                 <select>
                     <option>Default</option>
